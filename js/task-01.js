@@ -2,26 +2,54 @@ const itemsOfCategories = document.querySelectorAll('.item');
 
 console.log('Number of categories:', itemsOfCategories.length);
 
-const firstItemOfCategories = itemsOfCategories[0];
-const firstItemNameCategorie = firstItemOfCategories.firstElementChild;
+/**
+ *    forEach
+ */
+itemsOfCategories.forEach(function (element, index) {
+  const ItemOfCategories = itemsOfCategories[index];
+  const ItemNameCategorie = ItemOfCategories.firstElementChild;
 
-console.log('Category:', firstItemNameCategorie.textContent);
+  console.log('Category:', ItemNameCategorie.textContent);
 
-const firstItemListElements = firstItemOfCategories.children;
-console.log('Elements:', firstItemListElements[1].children.length);
+  const ItemListElements = ItemOfCategories.children;
+  console.log('Elements:', ItemListElements[1].children.length);
+});
 
-const secondItemOfCategories = itemsOfCategories[1];
-const secondItemNameCategorie = secondItemOfCategories.firstElementChild;
+/**
+ *     for
+ */
+// for (let i = 0; i < itemsOfCategories.length; i += 1) {
+//   const ItemOfCategories = itemsOfCategories[i];
+//   const ItemNameCategorie = ItemOfCategories.firstElementChild;
+//   console.log('Category:', ItemNameCategorie.textContent);
+//   const ItemListElements = ItemOfCategories.children;
+//   console.log('Elements:', ItemListElements[1].children.length);
+// }
 
-console.log('Category:', secondItemNameCategorie.textContent);
+/**
+ *     Тест методом ручного перебору
+ *
+ */
+// const firstItemOfCategories = itemsOfCategories[0];
+// const firstItemNameCategorie = firstItemOfCategories.firstElementChild;
 
-const secondItemListElements = secondItemOfCategories.children;
-console.log('Elements:', secondItemListElements[1].children.length);
+// console.log('Category:', firstItemNameCategorie.textContent);
 
-const thirdItemOfCategories = itemsOfCategories[2];
-const thirdItemNameCategorie = thirdItemOfCategories.firstElementChild;
+// const firstItemListElements = firstItemOfCategories.children;
+// console.log('Elements:', firstItemListElements[1].children.length);
 
-console.log('Category:', thirdItemNameCategorie.textContent);
+// const secondItemOfCategories = itemsOfCategories[1];
+// const secondItemNameCategorie = secondItemOfCategories.firstElementChild;
 
-const thirdItemListElements = thirdItemOfCategories.children;
-console.log('Elements:', thirdItemListElements[1].children.length);
+// console.log('Category:', secondItemNameCategorie.textContent);
+
+// const secondItemListElements = secondItemOfCategories.children;
+// console.log('Elements:', secondItemListElements[1].children.length);
+
+// const thirdItemOfCategories = itemsOfCategories[2];
+// const thirdItemNameCategorie = thirdItemOfCategories.firstElementChild;
+
+// console.log('Category:', thirdItemNameCategorie.textContent);
+
+// const thirdItemListElements = thirdItemOfCategories.children;
+// console.log('Elements:', thirdItemListElements[1].children.length);
