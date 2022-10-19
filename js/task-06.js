@@ -24,7 +24,8 @@ textInput.addEventListener('blur', event => {
     textInput.classList.remove('invalid', 'valid');
     console.log(textInput.classList);
   } else if (
-    event.currentTarget.value.length == textInput.getAttribute('data-length')
+    event.currentTarget.value.length ===
+    Number(textInput.getAttribute('data-length'))
   ) {
     console.log('Правильно');
     textInput.classList.remove('invalid');
