@@ -14,6 +14,7 @@ const images = [
 ];
 
 const imagesContainerEl = document.querySelector('.gallery');
+
 const makeImagesMarkup = item => {
   const { url, alt } = item;
   return `<li class = "gallery-item"><img src="${url}" alt="${alt}" width="400"/></li>`;
@@ -22,3 +23,16 @@ const makeImagesMarkup = item => {
 const ImagesMarkup = images.map(makeImagesMarkup).join('');
 
 imagesContainerEl.insertAdjacentHTML('afterBegin', ImagesMarkup);
+
+// const arr = [];
+// for (let i = 0; i < images.length; i += 1) {
+//   const newItem = document.createElement('li');
+//   const newImg = document.createElement('img');
+//   newImg.style.width = '300px';
+//   newImg.setAttribute('src', images[i].url);
+//   newImg.setAttribute('alt', images[i].alt);
+//   newItem.append(newImg);
+//   console.log(newItem);
+//   arr.push(newItem);
+// }
+// imagesContainerEl.append(...arr);
