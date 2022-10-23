@@ -78,6 +78,12 @@ function handleBtnCreateEl() {
 //   divSize = 30;
 // }
 
+// function handleBtnDestroyEl() {
+//   [...divBoxesEl.children].forEach(element => element.remove());
+//   divsEl = [];
+//   divSize = 30;
+// }
+
 function handleBtnDestroyEl() {
   divBoxesEl.querySelectorAll('div').forEach(element => element.remove());
   divsEl = [];
