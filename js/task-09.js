@@ -7,8 +7,11 @@ function getRandomHexColor() {
 }
 
 const onBtnChangeColorElClick = () => {
-  bodyEl.style.backgroundColor = `${getRandomHexColor()}`;
-  outputTextEl.textContent = `${getRandomHexColor()}`;
+  const bodyColor = getRandomHexColor();
+
+  // bodyEl.style.backgroundColor = bodyColor;
+  bodyEl.setAttribute('style', `background-color: ${bodyColor}`);
+  outputTextEl.textContent = bodyColor;
 };
 
 btnChangeColorEl.addEventListener('click', onBtnChangeColorElClick);
