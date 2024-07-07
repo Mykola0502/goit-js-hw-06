@@ -1,19 +1,32 @@
-const itemsOfCategories = document.querySelectorAll('.item');
+const categories = document.querySelector("#categories");
 
-console.log('Number of categories:', itemsOfCategories.length);
+console.log("Number of categories: ", categories.children.length);
 
-/**
- *    forEach
- */
-itemsOfCategories.forEach(function (element, index) {
-  const ItemOfCategories = itemsOfCategories[index];
-  const ItemNameCategorie = ItemOfCategories.firstElementChild;
-
-  console.log('Category:', ItemNameCategorie.textContent);
-
-  const ItemListElements = ItemOfCategories.children;
-  console.log('Elements:', ItemListElements[1].children.length);
+[...categories.children].forEach((category) => {
+  console.log("Category: ", category.firstElementChild.textContent);
+  console.log(
+    "Elements: ",
+    category.firstElementChild.nextElementSibling.children.length
+  );
 });
+
+
+// const itemsOfCategories = document.querySelectorAll('.item');
+
+// console.log('Number of categories:', itemsOfCategories.length);
+
+// /**
+//  *    forEach
+//  */
+// itemsOfCategories.forEach(function (element, index) {
+//   const ItemOfCategories = itemsOfCategories[index];
+//   const ItemNameCategorie = ItemOfCategories.firstElementChild;
+
+//   console.log('Category:', ItemNameCategorie.textContent);
+
+//   const ItemListElements = ItemOfCategories.children;
+//   console.log('Elements:', ItemListElements[1].children.length);
+// });
 
 /**
  *     for
