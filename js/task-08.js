@@ -20,3 +20,22 @@ function submitHandler(event) {
   console.log(user);
   event.currentTarget.reset();
 }
+
+const formLogin = document.querySelector(".login-form");
+
+// formLogin.addEventListener("submit", onSubmit);
+
+// function onSubmit(evt) {
+//   evt.preventDefault();
+//   const form = evt.target;
+//   const email = form.elements.email.value;
+//   const password = form.elements.password.value;
+
+//   if (email && password) {
+//     const user = { email, password };
+//     console.log(user);
+//     form.reset();
+//   } else {
+//     alert("всі поля повинні бути заповнені");
+//   }
+// }
